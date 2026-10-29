@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Гараж 38</title>
+    <meta name="theme-color" content="#071a3a" />
+    <title>Гараж 38 | Автосервис в Москве</title>
     <meta
       name="description"
-      content="Автосервис Гараж 38 — диагностика, ремонт, шиномонтаж, покраска, обслуживание автомобилей."
+      content="Автосервис Гараж 38 — диагностика, ремонт, шиномонтаж, покраска и обслуживание автомобилей в Москве."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,7 +19,7 @@
   </head>
   <body>
     <div class="page-shell">
-      <header class="topbar">
+      <header class="topbar" id="home">
         <div class="brand" aria-label="Гараж 38 Автосервис">
           <div class="brand-mark">
             <span>38</span>
@@ -30,23 +31,23 @@
         </div>
 
         <nav class="main-nav" aria-label="Главная навигация">
-          <a href="#">Главная</a>
-          <a href="#">Услуги</a>
-          <a href="#">О нас</a>
-          <a href="#">Цены</a>
-          <a href="#">Контакты</a>
+          <a href="#home">Главная</a>
+          <a href="#services">Услуги</a>
+          <a href="#about">О нас</a>
+          <a href="#prices">Цены</a>
+          <a href="#contacts">Контакты</a>
         </nav>
 
         <div class="header-actions">
           <a href="tel:+79991234567" class="phone-link">+7 (999) 123-45-67</a>
-          <button class="btn btn-fill">Записаться</button>
+          <a href="#contacts" class="btn btn-fill">Записаться</a>
         </div>
       </header>
 
       <main>
-        <section class="hero">
+        <section class="hero" id="prices">
           <div class="hero-copy">
-            <div class="eyebrow">НАДЁЖНЫЙ АВТОСЕРВИС:</div>
+            <div class="eyebrow">НАДЁЖНЫЙ АВТОСЕРВИС С 2014 ГОДА:</div>
             <h1>ГАРАЖ 38</h1>
             <h2>ЗАВОДИМСЯ О ВАШЕМ АВТО</h2>
 
@@ -65,7 +66,7 @@
               </li>
             </ul>
 
-            <button class="btn btn-fill btn-large">Записаться на ремонт</button>
+            <a href="#contacts" class="btn btn-fill btn-large">Записаться на ремонт</a>
           </div>
 
           <div class="hero-media" aria-label="Фото автосервиса">
@@ -105,7 +106,7 @@
           </article>
         </section>
 
-        <section class="services-section">
+        <section class="services-section" id="services">
           <div class="section-header">
             <div class="heading-block">
               <div class="section-label">НАШИ УСЛУГИ</div>
@@ -113,10 +114,11 @@
             </div>
             <div class="intro-copy">
               <p>
-                Диагностика, ремонт и обслуживание любых марок автомобилей. Используем
-                проверенные запчасти и современное оборудование.
+                Диагностика, техническое обслуживание и ремонт любых марок автомобилей.
+                Используем проверенные запчасти, современное оборудование и соблюдаем
+                стандарты качества на каждом этапе работы.
               </p>
-              <button class="btn btn-fill">Все услуги</button>
+              <a href="#contacts" class="btn btn-fill">Все услуги</a>
             </div>
           </div>
 
@@ -151,7 +153,7 @@
               <div class="card-image card-5"></div>
               <div class="card-content">
                 <span class="card-title">Замена масла</span>
-                <span class="card-subtitle">и жидкостей</span>
+                <span class="card-subtitle">и технических жидкостей</span>
               </div>
             </article>
             <article class="service-card card-small">
@@ -164,18 +166,18 @@
           </div>
         </section>
 
-        <section class="why-us">
+        <section class="why-us" id="about">
           <div class="why-image" aria-label="Фото ремонтной мастерской"></div>
 
           <div class="why-copy">
             <div class="section-label dark">ПОЧЕМУ ВЫБИРАЮТ НАС</div>
             <h3>ОПЫТ. КАЧЕСТВО.<br />НАДЁЖНОСТЬ.</h3>
             <p>
-              Мы — команда профессионалов, которая действительно любит своё дело. Для нас
-              важно, чтобы вы были уверены в своём автомобиле и чувствовали себя спокойно
-              после каждого визита к нам.
+              Мы — команда профессионалов, которая любит своё дело и ценит доверие клиентов.
+              В Гараж 38 вы получите честную диагностику, прозрачную смету, качественный ремонт
+              и спокойствие на дороге после каждого визита.
             </p>
-            <button class="btn btn-outline">Подробнее о нас</button>
+            <a href="#contacts" class="btn btn-outline">Подробнее о нас</a>
           </div>
 
           <div class="stats-list" aria-label="Наши преимущества">
@@ -198,6 +200,47 @@
           </div>
         </section>
 
+        <section class="contact-section" id="contacts">
+          <div class="section-header compact">
+            <div class="heading-block">
+              <div class="section-label">КОНТАКТЫ</div>
+              <h3>ОСТАВЬТЕ ЗАЯВКУ<br />ИЛИ ПРИЕХАИТЕ НАПРЯМУЮ</h3>
+            </div>
+            <div class="intro-copy">
+              <p>
+                Подберём удобное время для диагностики, ремонта или планового обслуживания.
+                Работаем быстро, чётко и без лишних переплат.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-grid">
+            <article class="contact-card">
+              <div class="contact-icon">☎</div>
+              <div class="contact-body">
+                <span>Телефон</span>
+                <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+              </div>
+            </article>
+
+            <article class="contact-card">
+              <div class="contact-icon">⌂</div>
+              <div class="contact-body">
+                <span>Адрес</span>
+                <p>г. Москва, ул. Автодромная, 38</p>
+              </div>
+            </article>
+
+            <article class="contact-card">
+              <div class="contact-icon">✉</div>
+              <div class="contact-body">
+                <span>Email</span>
+                <a href="mailto:hello@garaz38.ru">hello@garaz38.ru</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
         <section class="cta-banner">
           <div class="cta-left">
             <div class="cta-mark">⚙</div>
@@ -208,7 +251,7 @@
           </div>
 
           <div class="cta-right">
-            <button class="btn btn-fill">Записаться</button>
+            <a href="#contacts" class="btn btn-fill">Записаться</a>
             <a href="tel:+79991234567">+7 (999) 123-45-67</a>
           </div>
         </section>
@@ -228,11 +271,11 @@
         </div>
 
         <nav class="footer-nav" aria-label="Навигация в футере">
-          <a href="#">Главная</a>
-          <a href="#">Услуги</a>
-          <a href="#">О нас</a>
-          <a href="#">Цены</a>
-          <a href="#">Контакты</a>
+          <a href="#home">Главная</a>
+          <a href="#services">Услуги</a>
+          <a href="#about">О нас</a>
+          <a href="#prices">Цены</a>
+          <a href="#contacts">Контакты</a>
         </nav>
 
         <div class="socials" aria-label="Социальные сети">
