@@ -373,7 +373,7 @@ img {
 
 .services-strip {
   display: grid;
-  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  grid-template-columns: repeat(6, minmax(120px, 1fr));
   gap: 20px;
   padding: 26px 40px 18px;
   background: rgba(245, 247, 250, 0.98);
@@ -391,14 +391,6 @@ img {
   color: var(--text-dark);
   padding: 12px 10px;
   text-align: center;
-  border: 1px solid transparent;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.mini-service:hover,
-.mini-service:focus-visible {
-  transform: translateY(-2px);
-  border-color: rgba(7, 25, 52, 0.12);
 }
 
 .mini-icon-box {
@@ -487,14 +479,6 @@ img {
   border-radius: 14px;
   background: #0b1731;
   box-shadow: 0 14px 30px rgba(8, 20, 40, 0.08);
-  display: block;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.service-card:hover,
-.service-card:focus-visible {
-  transform: translateY(-2px);
-  box-shadow: 0 18px 35px rgba(8, 20, 40, 0.12);
 }
 
 .card-large {
@@ -572,60 +556,87 @@ img {
   opacity: 0.96;
 }
 
-.album-section {
-  background: linear-gradient(180deg, #eef3f5 0%, #f7f9fb 100%);
-  padding: 48px 42px 28px;
+.service-gallery {
+  margin-top: 34px;
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(7, 25, 52, 0.06);
+  border-radius: 18px;
+  padding: 22px 18px 18px;
 }
 
-.album-grid {
+.gallery-header {
+  margin-bottom: 18px;
+}
+
+.gallery-header h4 {
+  margin: 0;
+  color: var(--navy-900);
+  font-size: clamp(1.7rem, 2vw, 2.5rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(220px, 1fr));
   gap: 18px;
 }
 
 .album-card {
-  margin: 0;
-  background: #fff;
-  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 16px 30px rgba(7, 25, 52, 0.08);
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 16px 32px rgba(7, 25, 52, 0.08);
+  border: 1px solid rgba(7, 25, 52, 0.08);
 }
 
-.album-card.large {
-  grid-column: span 2;
-}
-
-.album-image {
-  height: 230px;
+.album-visual {
+  height: 220px;
   background-size: cover;
   background-position: center;
+  filter: saturate(1.15) contrast(1.06);
 }
 
-.album-1 {
-  background-image: url("https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=1200&q=80");
+.visual-1 {
+  background-image: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80");
 }
 
-.album-2 {
-  background-image: url("https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80");
-}
-
-.album-3 {
-  background-image: url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80");
-}
-
-.album-4 {
+.visual-2 {
   background-image: url("https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80");
 }
 
-.album-5 {
-  background-image: url("https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=80");
+.visual-3 {
+  background-image: url("https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=1200&q=80");
 }
 
-.album-card figcaption {
-  padding: 16px 18px 18px;
-  font-weight: 800;
+.visual-4 {
+  background-image: url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1200&q=80");
+}
+
+.visual-5 {
+  background-image: url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80");
+}
+
+.visual-6 {
+  background-image: url("https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80");
+}
+
+.album-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 16px 18px;
+}
+
+.album-caption strong {
+  font-size: 1.08rem;
   color: var(--navy-900);
-  letter-spacing: 0.02em;
+}
+
+.album-caption span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .why-us {
@@ -706,7 +717,7 @@ img {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
   gap: 18px;
 }
 
@@ -922,12 +933,12 @@ img {
   }
 
   .catalog-grid,
-  .album-grid {
+  .gallery-grid {
     grid-template-columns: repeat(2, minmax(220px, 1fr));
   }
 
   .contact-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .cta-banner {
@@ -951,8 +962,7 @@ img {
   .services-section,
   .why-us,
   .site-footer,
-  .contact-section,
-  .album-section {
+  .contact-section {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -994,13 +1004,8 @@ img {
   }
 
   .catalog-grid,
-  .album-grid,
-  .contact-grid {
+  .gallery-grid {
     grid-template-columns: 1fr;
-  }
-
-  .album-card.large {
-    grid-column: span 1;
   }
 
   .cta-banner {
@@ -1071,4 +1076,3 @@ img {
     padding: 18px 14px;
   }
 }
-
