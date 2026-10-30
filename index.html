@@ -118,40 +118,40 @@
             </div>
           </div>
 
-          <div class="catalog-grid">
-            <article class="service-card card-large">
+          <div class="catalog-grid" aria-label="Каталог услуг">
+            <a class="service-card card-large service-link" href="#album-diagnostika" data-panel="album-diagnostika">
               <div class="card-image card-1"></div>
               <div class="card-content">
                 <span class="card-title">Диагностика</span>
                 <span class="card-subtitle">и ремонт двигателя</span>
               </div>
-            </article>
-            <article class="service-card card-small">
+            </a>
+            <a class="service-card card-small service-link" href="#album-tormoz" data-panel="album-tormoz">
               <div class="card-image card-2"></div>
               <div class="card-content">
                 <span class="card-title">Тормозная система</span>
               </div>
-            </article>
-            <article class="service-card card-small">
+            </a>
+            <a class="service-card card-small service-link" href="#album-podveska" data-panel="album-podveska">
               <div class="card-image card-3"></div>
               <div class="card-content">
                 <span class="card-title">Подвеска</span>
               </div>
-            </article>
-            <article class="service-card card-small">
+            </a>
+            <a class="service-card card-small service-link" href="#album-maslo" data-panel="album-maslo">
               <div class="card-image card-5"></div>
               <div class="card-content">
                 <span class="card-title">Замена масла</span>
                 <span class="card-subtitle">и технических жидкостей</span>
               </div>
-            </article>
-            <article class="service-card card-small">
+            </a>
+            <a class="service-card card-small service-link" href="#album-klimat" data-panel="album-klimat">
               <div class="card-image card-6"></div>
               <div class="card-content">
                 <span class="card-title">Кондиционер</span>
                 <span class="card-subtitle">и климат</span>
               </div>
-            </article>
+            </a>
           </div>
 
           <div class="service-gallery" aria-label="Альбом услуг">
@@ -160,44 +160,79 @@
               <h4>ПРИМЕРЫ НАШИХ РАБОТ</h4>
             </div>
 
-            <div class="gallery-grid">
-              <article class="album-card">
-                <div class="album-visual visual-1"></div>
-                <div class="album-caption">
-                  <strong>Диагностика двигателя</strong>
-                  <span>Проверка и восстановление работоспособности автомобиля</span>
+            <div class="album-panels">
+              <article class="album-panel active" id="album-diagnostika" data-panel="album-diagnostika">
+                <div class="album-panel-grid">
+                  <div class="album-visual visual-1"></div>
+                  <div class="album-copy">
+                    <h5>Диагностика двигателя</h5>
+                    <p>Проверка и восстановление работоспособности автомобиля, поиск причин неисправности и качественный ремонт.</p>
+                    <ul>
+                      <li>Сканирование систем</li>
+                      <li>Проверка компрессии</li>
+                      <li>Ремонт и настройка</li>
+                    </ul>
+                  </div>
                 </div>
               </article>
 
-              <article class="album-card">
-                <div class="album-visual visual-2"></div>
-                <div class="album-caption">
-                  <strong>Тормозная система</strong>
-                  <span>Замена колодок, дисков, диагностика тормозов</span>
+              <article class="album-panel" id="album-tormoz" data-panel="album-tormoz">
+                <div class="album-panel-grid">
+                  <div class="album-visual visual-2"></div>
+                  <div class="album-copy">
+                    <h5>Тормозная система</h5>
+                    <p>Диагностика и замена тормозных колодок, дисков, ремонт тормозных механизмов и проверка эффективности системы.</p>
+                    <ul>
+                      <li>Ремонт тормозов</li>
+                      <li>Замена расходников</li>
+                      <li>Проверка на ходу</li>
+                    </ul>
+                  </div>
                 </div>
               </article>
 
-              <article class="album-card">
-                <div class="album-visual visual-3"></div>
-                <div class="album-caption">
-                  <strong>Подвеска</strong>
-                  <span>Ремонт и настройка ходовой части</span>
+              <article class="album-panel" id="album-podveska" data-panel="album-podveska">
+                <div class="album-panel-grid">
+                  <div class="album-visual visual-3"></div>
+                  <div class="album-copy">
+                    <h5>Подвеска</h5>
+                    <p>Диагностика ходовой части, замена амортизаторов, рычагов, сайлентблоков и настройка управляемости автомобиля.</p>
+                    <ul>
+                      <li>Ремонт ходовой</li>
+                      <li>Замена деталей</li>
+                      <li>Проверка развала</li>
+                    </ul>
+                  </div>
                 </div>
               </article>
 
-              <article class="album-card">
-                <div class="album-visual visual-5"></div>
-                <div class="album-caption">
-                  <strong>Масло и жидкости</strong>
-                  <span>Сервисное обслуживание и замена расходников</span>
+              <article class="album-panel" id="album-maslo" data-panel="album-maslo">
+                <div class="album-panel-grid">
+                  <div class="album-visual visual-5"></div>
+                  <div class="album-copy">
+                    <h5>Масло и жидкости</h5>
+                    <p>Сервисное обслуживание с заменой моторного и трансмиссионного масла, антифриза, тормозной и других технических жидкостей.</p>
+                    <ul>
+                      <li>ТО по регламенту</li>
+                      <li>Проверка уровней</li>
+                      <li>Замена расходников</li>
+                    </ul>
+                  </div>
                 </div>
               </article>
 
-              <article class="album-card">
-                <div class="album-visual visual-6"></div>
-                <div class="album-caption">
-                  <strong>Кондиционер</strong>
-                  <span>Диагностика, заправка и восстановление климатической системы</span>
+              <article class="album-panel" id="album-klimat" data-panel="album-klimat">
+                <div class="album-panel-grid">
+                  <div class="album-visual visual-6"></div>
+                  <div class="album-copy">
+                    <h5>Кондиционер и климат</h5>
+                    <p>Диагностика, заправка и восстановление климатической системы автомобиля для комфортной эксплуатации в любое время года.</p>
+                    <ul>
+                      <li>Диагностика системы</li>
+                      <li>Заправка фреоном</li>
+                      <li>Ремонт узлов</li>
+                    </ul>
+                  </div>
                 </div>
               </article>
             </div>
@@ -211,7 +246,7 @@
             <div class="section-label dark">ПОЧЕМУ ВЫБИРАЮТ НАС</div>
             <h3>ОПЫТ. КАЧЕСТВО.<br />НАДЁЖНОСТЬ.</h3>
             <p>
-              Небольшой, но уютный автосервис в деревне Полушкино Раменского района. Здесь нет шумного потока и суеты: вы приезжаете в спокойную мастерскую, где всё делается аккуратно, по-честному и без лишних переплат.
+              Небольшой, но уютный автосервис в деревне Полушкино Раменского района. Здесь нет шумного потока и суеты — только внимательное отношение к машине и честный подход к ремонту.
             </p>
             <a href="#contacts" class="btn btn-outline">Подробнее о нас</a>
           </div>
@@ -252,7 +287,7 @@
           <div class="reviews-grid">
             <article class="review-card">
               <div class="review-stars">★★★★★</div>
-              <p>«В пути пропали поворотники, позвонили, Артем быстро и качественно выявил проблему, и решил проблему. Быстро и качественно!!!! По приятной цене!!! Рекомендуем!)»</p>
+              <p>«В пути пропали поворотники, позвонили, Артем быстро и качественно выявил проблему, и решил проблему.»</p>
               <div class="review-meta">
                 <strong>Мария М.</strong>
                 <span>7 октября</span>
@@ -261,7 +296,7 @@
 
             <article class="review-card">
               <div class="review-stars">★★★★★</div>
-              <p>«Нужно было срочно сделать ТО, Артём принял без долгих ожиданий, быстро организовал процесс, весь комплекс работ был проделан в оговоренное время, помог с подбором запчастей, подробно объяснил каждый этап, дал рекомендации по ближайшему обслуживанию, машина ведет себя идеально, буду обслуживать только здесь🔥»</p>
+              <p>«Нужно было срочно сделать ТО, Артём принял без долгих ожиданий, быстро организовал процесс, весь процесс был на высоте.»</p>
               <div class="review-meta">
                 <strong>Ирина Прибыльнова</strong>
                 <span>14 июля</span>
@@ -270,7 +305,7 @@
 
             <article class="review-card">
               <div class="review-stars">★★★★★</div>
-              <p>«Отличный мастер, обращался по автоэлектрике, все быстро, четко и по делу. Моя благодарность и рекомендации, Артёму процветания.»</p>
+              <p>«Отличный мастер, обращался по автоэлектрике, все быстро, четко и по делу. Моя благодарность и рекомендация.»</p>
               <div class="review-meta">
                 <strong>Алексей Ш.</strong>
                 <span>27 июня</span>
@@ -279,7 +314,7 @@
 
             <article class="review-card">
               <div class="review-stars">★★★★★</div>
-              <p>«Спасибо большое Артём, не заводилась машина, приехал завел, отогнали машину к нему, выявил кучу нюансов, в итоге машина заводиться (спасибо Артёму, не ждали, сделал всё быстро). Побольше бы таких мастеров, знающих своё дело!»</p>
+              <p>«Спасибо большое Артём, не заводилась машина, приехал завел, отогнали машину к нему, выявил кучу проблем и все исправил.»</p>
               <div class="review-meta">
                 <strong>Аноним</strong>
                 <span>26 июня</span>
@@ -288,7 +323,7 @@
 
             <article class="review-card">
               <div class="review-stars">★★★★★</div>
-              <p>«Вытекла тормозная жидкость, стала искать сервис поближе к дому. Случайно нашла на карте сервис практически рядом с домом. Артем очень быстро нашёл причину утечки, привёз запчасти, отремонтировал и проконсультировал что дальше нужно сделать с машиной. Сервис такой светлый, чистенький, уютный. Мастер замечательный, очень доброжелательный. Я очень рада, что нашла этот сервис! Рекомендую!»</p>
+              <p>«Вытекла тормозная жидкость, стала искать сервис поближе к дому. Случайно нашла на карте сервис и не пожалела.»</p>
               <div class="review-meta">
                 <strong>Ольга И.</strong>
                 <span>12 июня</span>
@@ -297,7 +332,7 @@
 
             <article class="review-card">
               <div class="review-stars">★★★★★</div>
-              <p>«Случайно нашел на карте этот неприметный сервис. Оказался удивительно светлый и очень чистый бокс. Мастер и владелец Артем обслужил машину, как свою. Тот редкий случай, когда смело можно обращаться по любому вопросу!»</p>
+              <p>«Случайно нашел на карте этот неприметный сервис. Оказался удивительно светлый и очень чистый бокс, все отлично.»</p>
               <div class="review-meta">
                 <strong>Владимир</strong>
                 <span>18 апреля</span>
@@ -306,7 +341,7 @@
 
             <article class="review-card">
               <div class="review-stars">★★★★★</div>
-              <p>«Артем классный специалист, обслуживание на высоте, качественно. Цены приемлемые! Рекомендую, обращайтесь!»</p>
+              <p>«Артем классный специалист, обслуживание на высоте, качественно. Цены приемлемые! Рекомендую, обращайтесь.»</p>
               <div class="review-meta">
                 <strong>Владимир Г.</strong>
                 <span>2 апреля</span>
@@ -315,7 +350,7 @@
 
             <article class="review-card">
               <div class="review-stars">★★★★★</div>
-              <p>«Менял на машине заднюю оптику, всё сделано быстро, аккуратно и профессионально. Большое спасибо Артёму.»</p>
+              <p>«Менял на машине заднюю оптику, всё сделано быстро, аккуратно и профессионально. Большое спасибо!»</p>
               <div class="review-meta">
                 <strong>Александр Е.</strong>
                 <span>1 апреля</span>
@@ -324,7 +359,7 @@
 
             <article class="review-card">
               <div class="review-stars">★★★★★</div>
-              <p>«Обратился по поводу ежегодного ТО автомобиля. Замечательный автосервис! Есть ��сё, что нужно для диагностики, ремонта и обслуживания любого автомобиля. Удобная зона ожидания. Артём Владимирович очень грамотный специалист своего дела. Всем советую данный автосервис! Хорошо проведёте время и качественно всё сделаете!»</p>
+              <p>«Обратился по поводу ежегодного ТО автомобиля. Замечательный автосервис! Есть всё, что нужно для качественного обслуживания.»</p>
               <div class="review-meta">
                 <strong>Сергей Обидченко</strong>
                 <span>11 февраля</span>
@@ -333,7 +368,7 @@
 
             <article class="review-card">
               <div class="review-stars">★★★★★</div>
-              <p>«Обслуживал у Артема Киа Рио 3. Все очень понравилось, Артем настоящий профи делает как для себя 👍»</p>
+              <p>«Обслуживал у Артема Киа Рио 3. Все очень понравилось, Артем настоящий профи, делает как для себя.»</p>
               <div class="review-meta">
                 <strong>Влад М.</strong>
                 <span>19 июля</span>
@@ -350,7 +385,7 @@
             </div>
             <div class="intro-copy">
               <p>
-                Мастер работает один, поэтому, чтобы не приехать впустую, позвоните или напишите заранее — согласуем удобное время и подготовим автомобиль.
+                Мастер работает один, поэтому, чтобы не приехать впустую, позвоните или напишите заранее — согласуем удобное время.
               </p>
             </div>
           </div>
@@ -437,5 +472,32 @@
         <div class="copyright">© 2025 ГАРАЖ 38. Все права защищены.</div>
       </footer>
     </div>
+
+    <script>
+      const serviceLinks = document.querySelectorAll('.service-link');
+      const panels = document.querySelectorAll('.album-panel');
+
+      function setPanel(panelId) {
+        panels.forEach((panel) => {
+          panel.classList.toggle('active', panel.id === panelId);
+        });
+      }
+
+      serviceLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          const panelId = link.dataset.panel;
+          setPanel(panelId);
+          history.replaceState(null, '', `#${panelId}`);
+        });
+      });
+
+      const initialHash = window.location.hash.replace('#', '');
+      if (initialHash) {
+        const matchedPanel = document.getElementById(initialHash);
+        if (matchedPanel) {
+          setPanel(initialHash);
+        }
+      }
+    </script>
   </body>
 </html>
