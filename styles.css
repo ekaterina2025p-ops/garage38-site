@@ -1,1118 +1,648 @@
-:root {
-  --navy-900: #071a3a;
-  --navy-800: #0a244e;
-  --navy-700: #0d2f67;
-  --navy-500: #143d80;
-  --red-500: #e73036;
-  --red-600: #d9212d;
-  --white: #f5f7fa;
-  --paper: #eef1f4;
-  --text-dark: #081b3b;
-  --muted: #60708d;
-  --line: rgba(255, 255, 255, 0.12);
-  --shadow: 0 20px 45px rgba(5, 16, 38, 0.18);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  background: #dfe3ea;
-  color: var(--text-dark);
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  font: inherit;
-  cursor: pointer;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-.page-shell {
-  max-width: 1460px;
-  margin: 0 auto;
-  background: var(--paper);
-  min-height: 100vh;
-  box-shadow: var(--shadow);
-}
-
-.topbar {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 42px 16px 38px;
-  background: linear-gradient(180deg, rgba(6, 22, 49, 0.96), rgba(5, 19, 42, 0.96));
-  color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.topbar::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.02) 100%);
-  pointer-events: none;
-}
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  position: relative;
-  z-index: 1;
-}
-
-.brand-mark {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  border: 2px solid #f5f7fa;
-  background: linear-gradient(135deg, #f4f9ff, #dfeaf8);
-  color: var(--navy-900);
-  display: grid;
-  place-items: center;
-  font-weight: 900;
-  font-size: 1.1rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.brand-mark::before {
-  content: "";
-  position: absolute;
-  inset: 8px;
-  border: 2px solid var(--red-500);
-  border-radius: 50%;
-}
-
-.brand-mark span {
-  position: relative;
-  z-index: 1;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-  letter-spacing: 0.03em;
-}
-
-.brand-text strong {
-  font-size: 2rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
-}
-
-.brand-text small {
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  opacity: 0.9;
-  margin-top: 4px;
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  position: relative;
-  z-index: 1;
-}
-
-.main-nav a {
-  font-size: 0.92rem;
-  font-weight: 600;
-  opacity: 0.95;
-  transition: opacity 0.2s ease;
-}
-
-.main-nav a:hover,
-.main-nav a:focus-visible {
-  opacity: 1;
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  position: relative;
-  z-index: 1;
-}
-
-.phone-link {
-  font-weight: 700;
-  font-size: 0.8rem;
-  white-space: nowrap;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 0;
-  border-radius: 12px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-decoration: none;
-}
-
-.btn:hover,
-.btn:focus-visible {
-  transform: translateY(-1px);
-}
-
-.btn-fill {
-  background: linear-gradient(180deg, #ef3a3d, #db1f2a);
-  color: white;
-  padding: 14px 28px;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  box-shadow: 0 10px 22px rgba(219, 31, 42, 0.28);
-}
-
-.btn-large {
-  min-width: 300px;
-  padding: 18px 30px;
-  font-size: 1.08rem;
-  border-radius: 10px;
-}
-
-.hero {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  padding: 28px 42px 0;
-  background: linear-gradient(180deg, #07192f 0%, #061b3b 100%);
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 620px;
-  height: 100%;
-  right: -110px;
-  top: 0;
-  background: linear-gradient(135deg, rgba(234, 46, 52, 0.94), rgba(197, 25, 36, 0.88));
-  transform: skewX(-24deg);
-}
-
-.hero-copy,
-.hero-media {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-copy {
-  padding: 42px 0 34px;
-  color: white;
-}
-
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 800;
-  font-size: 0.9rem;
-  letter-spacing: 0.01em;
-  color: #dfeafc;
-  margin-bottom: 18px;
-  padding-left: 18px;
-  position: relative;
-}
-
-.eyebrow::before {
-  content: "";
-  width: 4px;
-  height: 24px;
-  border-radius: 3px;
-  background: var(--red-500);
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.hero-copy h1 {
-  margin: 0;
-  font-size: clamp(4.5rem, 5vw, 7.2rem);
-  line-height: 0.9;
-  letter-spacing: 0.03em;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.hero-copy h2 {
-  margin: 12px 0 18px;
-  font-size: clamp(2rem, 3vw, 3.15rem);
-  line-height: 1;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.feature-list {
-  list-style: none;
-  margin: 0 0 28px;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px 24px;
-  max-width: 620px;
-}
-
-.feature-list li {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
-  font-size: 0.96rem;
-  color: #edf5ff;
-}
-
-.icon-wrap {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  display: grid;
-  place-items: center;
-  position: relative;
-}
-
-.icon-wrap.green {
-  background: rgba(15, 163, 78, 0.15);
-  border-color: rgba(91, 214, 150, 0.8);
-}
-
-.mini-icon {
-  font-size: 0.8rem;
-  line-height: 1;
-  color: #fd5563;
-}
-
-.icon-wrap.green .mini-icon {
-  color: #6fe7a6;
-}
-
-.hero-media {
-  min-height: 540px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 14px 0 0;
-}
-
-.photo-frame {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 480px;
-  background-image: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80");
-  background-position: center;
-  background-size: cover;
-  border-radius: 0;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
-  transform: translateY(12px);
-}
-
-.circle-badge {
-  position: absolute;
-  right: 42px;
-  bottom: 10px;
-  width: 230px;
-  height: 230px;
-  border-radius: 50%;
-  background: rgba(7, 25, 52, 0.9);
-  border: 8px solid rgba(255, 255, 255, 0.8);
-  display: grid;
-  place-items: center;
-  box-shadow: 0 12px 30px rgba(2, 8, 18, 0.34);
-}
-
-.circle-badge::before,
-.circle-badge::after {
-  content: "";
-  position: absolute;
-  inset: 18px;
-  border: 3px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-}
-
-.circle-mark {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(232, 43, 52, 0.06), rgba(232, 43, 52, 0.3));
-  border: 4px solid rgba(255, 255, 255, 0.9);
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 12px;
-  font-weight: 900;
-  line-height: 1.08;
-  font-size: 1.4rem;
-  letter-spacing: 0.04em;
-  color: white;
-}
-
-.services-strip {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(120px, 1fr));
-  gap: 20px;
-  padding: 26px 40px 18px;
-  background: rgba(245, 247, 250, 0.98);
-  border-top: 1px solid rgba(7, 25, 52, 0.08);
-}
-
-.mini-service {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  min-height: 150px;
-  background: rgba(255, 255, 255, 0.18);
-  color: var(--text-dark);
-  padding: 12px 10px;
-  text-align: center;
-}
-
-.mini-icon-box {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 2px solid rgba(9, 34, 72, 0.9);
-  display: grid;
-  place-items: center;
-  font-size: 2rem;
-  color: var(--navy-900);
-  background: rgba(255, 255, 255, 0.34);
-}
-
-.mini-service p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.3;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
-.services-section {
-  background: linear-gradient(180deg, #f0f3f5 0%, #f5f7fa 100%);
-  padding: 48px 42px 32px;
-}
-
-.section-header {
-  display: grid;
-  grid-template-columns: 0.9fr 1.2fr;
-  align-items: end;
-  gap: 32px;
-  margin-bottom: 24px;
-}
-
-.section-label {
-  display: inline-block;
-  margin-bottom: 10px;
-  color: var(--red-500);
-  font-weight: 800;
-  font-size: 0.92rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.section-label.dark {
-  color: var(--red-500);
-}
-
-.heading-block h3,
-.why-copy h3 {
-  margin: 0;
-  font-size: clamp(2.3rem, 3vw, 4rem);
-  line-height: 0.95;
-  letter-spacing: 0.04em;
-  color: var(--navy-900);
-  font-weight: 900;
-}
-
-.intro-copy {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  padding-left: 26px;
-}
-
-.intro-copy p,
-.intro-copy li {
-  margin: 0;
-  max-width: 610px;
-  font-size: 1.02rem;
-  line-height: 1.7;
-  color: #21375b;
-}
-
-.service-points {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 8px;
-}
-
-.service-points li {
-  position: relative;
-  padding-left: 18px;
-}
-
-.service-points li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: var(--red-500);
-  font-weight: 900;
-}
-
-.catalog-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(240px, 1fr));
-  gap: 18px;
-}
-
-.service-card {
-  position: relative;
-  overflow: hidden;
-  min-height: 190px;
-  border-radius: 14px;
-  background: #0b1731;
-  box-shadow: 0 14px 30px rgba(8, 20, 40, 0.08);
-  display: block;
-  cursor: pointer;
-}
-
-.card-large {
-  grid-column: span 1;
-  min-height: 240px;
-}
-
-.card-image {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  filter: saturate(1.2) contrast(1.08);
-  transform: scale(1.02);
-}
-
-.card-1 {
-  background-image: url("https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=900&q=80");
-}
-
-.card-2 {
-  background-image: url("https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=900&q=80");
-}
-
-.card-3 {
-  background-image: url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=900&q=80");
-}
-
-.card-5 {
-  background-image: url("https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=900&q=80");
-}
-
-.card-6 {
-  background-image: url("https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=80");
-}
-
-.service-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(5, 13, 25, 0.16), rgba(4, 13, 27, 0.74));
-}
-
-.card-content {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  padding: 20px 18px 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  color: white;
-}
-
-.card-title,
-.card-subtitle {
-  display: block;
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-}
-
-.card-title {
-  font-size: 1.05rem;
-}
-
-.card-subtitle {
-  font-size: 0.9rem;
-  opacity: 0.96;
-}
-
-.service-gallery {
-  margin-top: 34px;
-  background: rgba(255, 255, 255, 0.42);
-  border: 1px solid rgba(7, 25, 52, 0.06);
-  border-radius: 18px;
-  padding: 22px 18px 18px;
-}
-
-.gallery-header {
-  margin-bottom: 18px;
-}
-
-.gallery-header h4 {
-  margin: 0;
-  color: var(--navy-900);
-  font-size: clamp(1.7rem, 2vw, 2.5rem);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.album-panels {
-  display: block;
-}
-
-.album-panel {
-  display: none;
-}
-
-.album-panel.active {
-  display: block;
-}
-
-.album-panel-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: 18px;
-  align-items: stretch;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(7, 25, 52, 0.08);
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 16px 32px rgba(7, 25, 52, 0.08);
-}
-
-.album-visual {
-  min-height: 320px;
-  background-size: cover;
-  background-position: center;
-  filter: saturate(1.15) contrast(1.06);
-}
-
-.visual-1 {
-  background-image: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80");
-}
-
-.visual-2 {
-  background-image: url("https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=900&q=80");
-}
-
-.visual-3 {
-  background-image: url("https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=900&q=80");
-}
-
-.visual-5 {
-  background-image: url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=900&q=80");
-}
-
-.visual-6 {
-  background-image: url("https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=900&q=80");
-}
-
-.album-copy {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 24px 22px 26px;
-}
-
-.album-copy h5 {
-  margin: 0 0 12px;
-  font-size: clamp(1.4rem, 2vw, 2rem);
-  line-height: 1.15;
-  color: var(--navy-900);
-  letter-spacing: 0.03em;
-}
-
-.album-copy p {
-  margin: 0 0 14px;
-  color: #21375b;
-  line-height: 1.7;
-  font-size: 1rem;
-}
-
-.album-copy ul {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--navy-900);
-  line-height: 1.8;
-  font-weight: 600;
-}
-
-.photo-section {
-  background: #edf3f7;
-  padding: 56px 42px 32px;
-}
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  gap: 18px;
-}
-
-.photo-card {
-  margin: 0;
-  overflow: hidden;
-  border-radius: 16px;
-  background: #dfeaf7;
-  box-shadow: 0 18px 30px rgba(7, 25, 52, 0.08);
-  min-height: 220px;
-}
-
-.photo-card-large {
-  grid-row: span 2;
-  min-height: 460px;
-}
-
-.photo-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.why-us {
-  display: grid;
-  grid-template-columns: 0.75fr 1.15fr 0.7fr;
-  align-items: center;
-  gap: 28px;
-  padding: 24px 42px 42px;
-  background: linear-gradient(180deg, #f5f7fa 0%, #eef2f5 100%);
-}
-
-.why-image {
-  min-height: 280px;
-  border-radius: 14px;
-  background-image: url("https://images.unsplash.com/photo-1581092921461-eab62e97a6d5?auto=format&fit=crop&w=1100&q=80");
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 18px 32px rgba(7, 25, 52, 0.12);
-}
-
-.why-copy {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.why-copy p {
-  margin: 0;
-  color: #233d68;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  max-width: 510px;
-}
-
-.btn-outline {
-  align-self: flex-start;
-  border: 1px solid rgba(11, 24, 49, 0.8);
-  background: transparent;
-  color: var(--navy-900);
-  padding: 14px 22px;
-  font-weight: 800;
-  border-radius: 10px;
-}
-
-.stats-list {
-  display: grid;
-  gap: 18px;
-}
-
-.stat-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  color: var(--navy-900);
-  font-weight: 700;
-  font-size: 1.02rem;
-}
-
-.stat-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid rgba(8, 27, 59, 0.8);
-  display: grid;
-  place-items: center;
-  font-size: 1.2rem;
-  color: var(--navy-900);
-}
-
-.reviews-section {
-  background: #edf3f7;
-  padding: 56px 42px 32px;
-}
-
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(220px, 1fr));
-  gap: 18px;
-}
-
-.review-card {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  padding: 24px 22px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(7, 25, 52, 0.08);
-  box-shadow: 0 16px 38px rgba(7, 25, 52, 0.08);
-}
-
-.review-stars {
-  color: #f7b500;
-  letter-spacing: 0.2em;
-  font-size: 1.05rem;
-}
-
-.review-card p {
-  margin: 0;
-  color: #21375b;
-  line-height: 1.8;
-  font-size: 1rem;
-}
-
-.review-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-top: auto;
-}
-
-.review-meta strong {
-  color: var(--navy-900);
-  font-size: 1.02rem;
-}
-
-.review-meta span {
-  color: var(--muted);
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.contact-section {
-  background: #edf3f7;
-  padding: 56px 42px 28px;
-}
-
-.section-header.compact {
-  margin-bottom: 30px;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(220px, 1fr));
-  gap: 18px;
-}
-
-.contact-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(7, 25, 52, 0.08);
-  border-radius: 18px;
-  box-shadow: 0 16px 38px rgba(7, 25, 52, 0.08);
-  padding: 22px 18px;
-}
-
-.contact-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, rgba(231, 48, 54, 0.12), rgba(20, 61, 128, 0.12));
-  border: 1px solid rgba(7, 25, 52, 0.08);
-  display: grid;
-  place-items: center;
-  font-size: 1.5rem;
-  color: var(--navy-900);
-  flex-shrink: 0;
-}
-
-.contact-body {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.contact-body span {
-  font-size: 0.74rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: var(--muted);
-}
-
-.contact-body a,
-.contact-body p {
-  margin: 0;
-  color: var(--navy-900);
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-.messenger-panel {
-  margin-top: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding-top: 12px;
-}
-
-.messenger-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.messenger-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 120px;
-  padding: 10px 16px;
-  border-radius: 999px;
-  border: 1px solid rgba(7, 25, 52, 0.12);
-  background: rgba(255, 255, 255, 0.7);
-  color: var(--navy-900);
-  font-weight: 700;
-}
-
-.cta-banner {
-  margin: 0 42px 0;
-  background: linear-gradient(90deg, #0a244d 0%, #0f2e68 100%);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 22px;
-  padding: 18px 28px 18px 16px;
-  overflow: hidden;
-}
-
-.cta-banner::before,
-.cta-banner::after {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(235, 55, 57, 0.98), rgba(194, 24, 36, 0.94));
-  top: 0;
-  transform: skewX(-20deg);
-}
-
-.cta-banner::before {
-  left: 0;
-}
-
-.cta-banner::after {
-  right: 0;
-}
-
-.cta-left,
-.cta-right {
-  position: relative;
-  z-index: 1;
-}
-
-.cta-left {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  color: white;
-}
-
-.cta-mark {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 1.2rem;
-}
-
-.cta-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.cta-title,
-.cta-subtitle {
-  display: block;
-  font-weight: 900;
-  letter-spacing: 0.03em;
-}
-
-.cta-title {
-  font-size: 1.2rem;
-}
-
-.cta-subtitle {
-  font-size: 1.75rem;
-  text-transform: uppercase;
-}
-
-.cta-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  color: white;
-}
-
-.cta-right a {
-  font-weight: 800;
-  font-size: 1.2rem;
-  white-space: nowrap;
-}
-
-.site-footer {
-  display: grid;
-  grid-template-columns: auto 1fr auto auto;
-  align-items: center;
-  gap: 22px;
-  padding: 24px 42px 28px;
-  background: linear-gradient(180deg, #061833 0%, #0d2449 100%);
-  color: white;
-}
-
-.footer-brand {
-  margin-right: 12px;
-}
-
-.footer-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 18px;
-}
-
-.footer-nav a {
-  font-size: 0.9rem;
-  font-weight: 600;
-  opacity: 0.95;
-}
-
-.socials {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.socials a {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.06);
-  font-size: 0.8rem;
-  font-weight: 800;
-}
-
-.copyright {
-  font-size: 0.8rem;
-  opacity: 0.9;
-  white-space: nowrap;
-}
-
-@media (max-width: 980px) {
-  .topbar,
-  .services-strip,
-  .section-header,
-  .why-us,
-  .contact-grid,
-  .catalog-grid,
-  .reviews-grid,
-  .site-footer {
-    grid-template-columns: 1fr;
-  }
-
-  .topbar {
-    flex-wrap: wrap;
-    gap: 18px;
-  }
-
-  .main-nav,
-  .header-actions,
-  .footer-nav,
-  .socials {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .services-strip {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 1fr));
-  }
-
-  .catalog-grid,
-  .reviews-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .why-us {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .site-footer {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .cta-banner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
+{"message":"Add the garage photos to the About section and style the collage","owner":"ekaterina2025p-ops","repo":"garage38-site","path":"index.html","sha":"487b7a34cf8ec4c2cf53fcef6939751eb9d032b5","content":"<!DOCTYPE html>
+<html lang=\"ru\">
+  <head>
+    <meta charset=\"UTF-8\" />
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
+    <meta name=\"theme-color\" content=\"#071a3a\" />
+    <title>Гараж 38 | Автосервис в Москве</title>
+    <meta
+      name=\"description\"
+      content=\"Автосервис Гараж 38 — диагностика, ремонт, шиномонтаж, покраска и обслуживание автомобилей в Москве\"
+    />
+    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />
+    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />
+    <link
+      href=\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap\"
+      rel=\"stylesheet\"
+    />
+    <link rel=\"stylesheet\" href=\"styles.css\" />
+  </head>
+  <body>
+    <div class=\"page-shell\">
+      <header class=\"topbar\" id=\"home\">
+        <div class=\"brand\" aria-label=\"Гараж 38 Автосервис\">
+          <div class=\"brand-mark\">
+            <span>38</span>
+          </div>
+          <div class=\"brand-text\">
+            <strong>ГАРАЖ 38</strong>
+            <small>АВТОСЕРВИС</small>
+          </div>
+        </div>
+
+        <nav class=\"main-nav\" aria-label=\"Главная навигация\">
+          <a href=\"#home\">Главная</a>
+          <a href=\"#services\">Услуги</a>
+          <a href=\"#about\">О нас</a>
+          <a href=\"#reviews\">Отзывы</a>
+          <a href=\"#contacts\">Контакты</a>
+        </nav>
+
+        <div class=\"header-actions\">
+          <a href=\"tel:+79996758252\" class=\"phone-link\">+7 (999) 675-82-52</a>
+          <a href=\"#contacts\" class=\"btn btn-fill\">Записаться</a>
+        </div>
+      </header>
+
+      <main>
+        <section class=\"hero\">
+          <div class=\"hero-copy\">
+            <div class=\"eyebrow\">Надежный автосервис.</div>
+            <h1>ГАРАЖ 38</h1>
+            <h2>ЗАБОДИМСЯ О ВАШЕМ АВТО</h2>
+
+            <ul class=\"feature-list\" aria-label=\"Преимущества автосервиса\">
+              <li>
+                <span class=\"icon-wrap\"><span class=\"mini-icon\">✦</span></span>
+                <span>Индивидуальный подход</span>
+              </li>
+              <li>
+                <span class=\"icon-wrap green\"><span class=\"mini-icon\">✓</span></span>
+                <span>Объясняю, что и зачем ремонтирую</span>
+              </li>
+              <li>
+                <span class=\"icon-wrap\"><span class=\"mini-icon\">◎</span></span>
+                <span>Современное оборудование</span>
+              </li>
+            </ul>
+
+            <a href=\"#contacts\" class=\"btn btn-fill btn-large\">Записаться на ремонт</a>
+          </div>
+
+          <div class=\"hero-media\" aria-label=\"Фото автосервиса\">
+            <div class=\"photo-frame\"></div>
+            <div class=\"circle-badge\">
+              <div class=\"circle-mark\">
+                <span>ГАРАЖ 38</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class=\"services-strip\" aria-label=\"Основные услуги\">
+          <article class=\"mini-service\">
+            <div class=\"mini-icon-box\">⚙</div>
+            <p>Диагностика<br />и ремонт двигателя</p>
+          </article>
+          <article class=\"mini-service\">
+            <div class=\"mini-icon-box\">◌</div>
+            <p>Тормозная<br />система</p>
+          </article>
+          <article class=\"mini-service\">
+            <div class=\"mini-icon-box\">⟐</div>
+            <p>Подвеска</p>
+          </article>
+          <article class=\"mini-service\">
+            <div class=\"mini-icon-box\">◍</div>
+            <p>Замена масла<br />и технических жидкостей</p>
+          </article>
+          <article class=\"mini-service\">
+            <div class=\"mini-icon-box\">❄</div>
+            <p>Кондиционер<br />и климат</p>
+          </article>
+        </section>
+
+        <section class=\"services-section\" id=\"services\">
+          <div class=\"section-header\">
+            <div class=\"heading-block\">
+              <div class=\"section-label\">НАШИ УСЛУГИ</div>
+              <h3>ПОЛНЫЙ СПЕКТР<br />АВТОУСЛУГ</h3>
+            </div>
+            <div class=\"intro-copy\">
+              <p>
+                Диагностика, техническое обслуживание и ремонт любых марок автомобилей.
+                Используем проверенные запчасти, современное оборудование и соблюдаем
+                стандарты качества на каждом этапе работы.
+              </p>
+              <a href=\"#contacts\" class=\"btn btn-fill\">Все услуги</a>
+            </div>
+          </div>
+
+          <div class=\"catalog-grid\" aria-label=\"Каталог услуг\">
+            <a class=\"service-card card-large service-link\" href=\"#album-diagnostika\" data-panel=\"album-diagnostika\">
+              <div class=\"card-image card-1\"></div>
+              <div class=\"card-content\">
+                <span class=\"card-title\">Диагностика</span>
+                <span class=\"card-subtitle\">и ремонт двигателя</span>
+              </div>
+            </a>
+            <a class=\"service-card card-small service-link\" href=\"#album-tormoz\" data-panel=\"album-tormoz\">
+              <div class=\"card-image card-2\"></div>
+              <div class=\"card-content\">
+                <span class=\"card-title\">Тормозная система</span>
+              </div>
+            </a>
+            <a class=\"service-card card-small service-link\" href=\"#album-podveska\" data-panel=\"album-podveska\">
+              <div class=\"card-image card-3\"></div>
+              <div class=\"card-content\">
+                <span class=\"card-title\">Подвеска</span>
+              </div>
+            </a>
+            <a class=\"service-card card-small service-link\" href=\"#album-maslo\" data-panel=\"album-maslo\">
+              <div class=\"card-image card-5\"></div>
+              <div class=\"card-content\">
+                <span class=\"card-title\">Замена масла</span>
+                <span class=\"card-subtitle\">и технических жидкостей</span>
+              </div>
+            </a>
+            <a class=\"service-card card-small service-link\" href=\"#album-klimat\" data-panel=\"album-klimat\">
+              <div class=\"card-image card-6\"></div>
+              <div class=\"card-content\">
+                <span class=\"card-title\">Кондиционер</span>
+                <span class=\"card-subtitle\">и климат</span>
+              </div>
+            </a>
+            <a class=\"service-card card-small service-link\" href=\"#album-dopolnitelnoe\" data-panel=\"album-dopolnitelnoe\">
+              <div class=\"card-image card-7\"></div>
+              <div class=\"card-content\">
+                <span class=\"card-title\">Установка дополнительного оборудования</span>
+                <span class=\"card-subtitle\">парктроники, сигнализации, видеорегистраторы</span>
+              </div>
+            </a>
+            <a class=\"service-card card-small service-link\" href=\"#album-komp-diag\" data-panel=\"album-komp-diag\">
+              <div class=\"card-image card-8\"></div>
+              <div class=\"card-content\">
+                <span class=\"card-title\">Компьютерная диагностика</span>
+                <span class=\"card-subtitle\">двигателя и электроники</span>
+              </div>
+            </a>
+            <a class=\"service-card card-small service-link\" href=\"#album-to\" data-panel=\"album-to\">
+              <div class=\"card-image card-9\"></div>
+              <div class=\"card-content\">
+                <span class=\"card-title\">ТО</span>
+                <span class=\"card-subtitle\">техническое обслуживание</span>
+              </div>
+            </a>
+          </div>
+
+          <div class=\"service-gallery\" aria-label=\"Альбом услуг\">
+            <div class=\"gallery-header\">
+              <div class=\"section-label\">АЛЬБОМ УСЛУГ</div>
+              <h4>ПРИМЕРЫ НАШИХ РАБОТ</h4>
+            </div>
+
+            <div class=\"album-panels\">
+              <article class=\"album-panel active\" id=\"album-diagnostika\" data-panel=\"album-diagnostika\">
+                <div class=\"album-panel-grid\">
+                  <div class=\"album-visual visual-1\"></div>
+                  <div class=\"album-copy\">
+                    <h5>Диагностика двигателя</h5>
+                    <p>Проверка и восстановление работоспособности автомобиля, поиск причин неисправности и качество ремонта.</p>
+                    <ul>
+                      <li>Сканирование систем</li>
+                      <li>Проверка компрессии</li>
+                      <li>Ремонт и настройка</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class=\"album-gallery-grid\">
+                  <figure class=\"album-photo-card\">
+                    <div class=\"album-photo gallery-engine-1\"></div>
+                    <figcaption>Компьютерная диагностика</figcaption>
+                  </figure>
+                  <figure class=\"album-photo-card\">
+                    <div class=\"album-photo gallery-engine-2\"></div>
+                    <figcaption>Проверка компрессии</figcaption>
+                  </figure>
+                  <figure class=\"album-photo-card\">
+                    <div class=\"album-photo gallery-engine-3\"></div>
+                    <figcaption>Ремонт мотора</figcaption>
+                  </figure>
+                </div>
+              </article>
+
+              <article class=\"album-panel\" id=\"album-tormoz\" data-panel=\"album-tormoz\">
+                <div class=\"album-panel-grid\">
+                  <div class=\"album-visual visual-2\"></div>
+                  <div class=\"album-copy\">
+                    <h5>Тормозная система</h5>
+                    <p>Диагностика и замена тормозных колодок, дисков, ремонт тормозных механизмов и проверка эффективности торможения.</p>
+                    <ul>
+                      <li>Ремонт тормозов</li>
+                      <li>Замена расходников</li>
+                      <li>Проверка на ходу</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class=\"album-gallery-grid\">
+                  <figure class=\"album-photo-card\">
+                    <div class=\"album-photo gallery-brake-1\"></div>
+                    <figcaption>Осмотр тормозных дисков</figcaption>
+                  </figure>
+                  <figure class=\"album-photo-card\">
+                    <div class=\"album-photo gallery-brake-2\"></div>
+                    <figcaption>Замена колодок</figcaption>
+                  </figure>
+                  <figure class=\"album-photo-card\">
+                    <div class=\"album-photo gallery-brake-3\"></div>
+                    <figcaption>Проверка тормозного пути</figcaption>
+                  </figure>
+                </div>
+              </article>
+
+              <article class=\"album-panel\" id=\"album-podveska\" data-panel=\"album-podveska\">
+                <div class=\"album-panel-grid\">
+                  <div class=\"album-visual visual-3\"></div>
+                  <div class=\"album-copy\">
+                    <h5>Подвеска</h5>
+                    <p>Диагностика ходовой части, замена амортизаторов, рычагов, сайлентблоков и настройка управляемости автомобиля.</p>
+                    <ul>
+                      <li>Ремонт ходовой</li>
+                      <li>Замена деталей</li>
+                      <li>Проверка развала</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class=\"album-gallery-grid\">
+                  <figure class=\"album-photo-card\">
+                    <div class=\"album-photo gallery-suspension-1\"></div>
+                    <figcaption>Диагностика ходовой</figcaption>
+                  </figure>
+                  <figure class=\"album-photo-card\">
+                    <div class=\"album-photo gallery-suspension-2\"></div>
+                    <figcaption>Замена рычагов</figcaption>
+                  </figure>
+                  <figure class=\"album-photo-card\">
+                    <div class=\"album-photo gallery-suspension-3\"></div>
+                    <figcaption>Настройка подвески</figcaption>
+                  </figure>
+                </div>
+              </article>
+
+              <article class=\"album-panel\" id=\"album-maslo\" data-panel=\"album-maslo\">
+                <div class=\"album-panel-grid\">
+                  <div class=\"album-visual visual-5\"></div>
+                  <div class=\"album-copy\">
+                    <h5>Масло и жидкости</h5>
+                    <p>Сервисное обслуживание с заменой моторного и трансмиссионного масла, антифриза, тормозной и других технических жидкостей.</p>
+                    <ul>
+                      <li>ТО по регламенту</li>
+                      <li>Проверка уровней</li>
+                      <li>Замена расходников</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class=\"album-gallery-grid\">
+                  <figure class=\"album-photo-card\">
+                    <div class=\"album-photo gallery-oil-1\"></div>
+                    <figcaption>Проверка уровня масла</figcaption>
+                  </figure>
+                  <figure class=\"album-photo-card\">
+                    <div class=\"album-photo gallery-oil-2\"></div>
+                    <figcaption>Замена моторного масла</figcaption>
+                  </figure>
+                  <figure class=\"album-photo-card\">
+                    <div class=\"album-photo gallery-oil-3\"></div>
+                    <figcaption>Проверка жидкостей</figcaption>
+                  </figure>
+                </div>
+              </article>
+
+              <article class=\"album-panel\" id=\"album-klimat\" data-panel=\"album-klimat\">
+                <div class=\"album-panel-grid\">
+                  <div class=\"album-visual visual-6\"></div>
+                  <div class=\"album-copy\">
+                    <h5>Кондиционер и климат</h5>
+                    <p>Диагностика, заправка и восстановление климатической системы автомобиля для комфортной эксплуатации в любой сезон.</p>
+                    <ul>
+                      <li>Диагностика системы</li>
+                      <li>Заправка фреоном</li>
+                      <li>Ремонт узлов</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class=\"album-gallery-grid\">
+                  <figure class=\"album-photo-card\">
+                    <div class=\"album-photo gallery-climate-1\"></div>
+                    <figcaption>Диагностика кондиционера</figcaption>
+                  </figure>
+                  <figure class=\"album-photo-card\">
+                    <div class=\"album-photo gallery-climate-2\"></div>
+                    <figcaption>Заправка системы</figcaption>
+                  </figure>
+                  <figure class=\"album-photo-card\">
+                    <div class=\"album-photo gallery-climate-3\"></div>
+                    <figcaption>Проверка климата</figcaption>
+                  </figure>
+                </div>
+              </article>
+
+              <article class=\"album-panel\" id=\"album-dopolnitelnoe\" data-panel=\"album-dopolnitelnoe\">
+                <div class=\"album-panel-grid\">
+                  <div class=\"album-visual visual-7\"></div>
+                  <div class=\"album-copy\">
+                    <h5>Установка дополнительного оборудования</h5>
+                    <p>Монтаж современного оборудования для удобства, безопасности и комфорта: парктроники, видеорегистраторы, сигнализации.</p>
+                    <ul>
+                      <li>Монтаж парктроников</li>
+                      <li>Установка видеорегистраторов</li>
+                      <li>Сигнализация и электроника</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class=\"album-panel\" id=\"album-komp-diag\" data-panel=\"album-komp-diag\">
+                <div class=\"album-panel-grid\">
+                  <div class=\"album-visual visual-8\"></div>
+                  <div class=\"album-copy\">
+                    <h5>Компьютерная диагностика</h5>
+                    <p>Полная проверка двигателя, систем ABS, ESP, коробки передач, электроники и датчиков с помощью современного оборудования.</p>
+                    <ul>
+                      <li>Диагностика двигателя</li>
+                      <li>Проверка блоков управления</li>
+                      <li>Поиск ошибок и причин поломок</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class=\"album-panel\" id=\"album-to\" data-panel=\"album-to\">
+                <div class=\"album-panel-grid\">
+                  <div class=\"album-visual visual-9\"></div>
+                  <div class=\"album-copy\">
+                    <h5>Техническое обслуживание (ТО)</h5>
+                    <p>Регламентное обслуживание автомобиля по срокам и пробегу: замена масла, фильтров, жидкостей, проверка узлов и агрегатов.</p>
+                    <ul>
+                      <li>ТО по регламенту</li>
+                      <li>Проверка агрегатов</li>
+                      <li>Замена расходников</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class=\"why-us\" id=\"about\">
+          <div class=\"why-media\" aria-label=\"Фото автосервиса и интерьера\">
+            <div class=\"why-image main-photo\" aria-label=\"Гараж 38 снаружи\"></div>
+            <div class=\"why-image secondary-photo\" aria-label=\"Интерьер автосервиса\"></div>
+          </div>
+
+          <div class=\"why-copy\">
+            <div class=\"section-label dark\">ПОЧЕМУ ВЫБИРАЮТ НАС</div>
+            <h3>ОПЫТ. ДОВОЛЬНЫЕ КЛИЕНТЫ.<br />ИНДИВИДУАЛЬНЫЙ ПОДХОД.</h3>
+            <p>
+              Небольшой, но уютный автосервис в деревне Полушкино Раменского района. Мы работаем без шаблонов: уделяем внимание каждой детали, объясняем причины неисправностей и всегда предлагаем честное решение.
+            </p>
+            <a href=\"#contacts\" class=\"btn btn-outline\">Подробнее о нас</a>
+          </div>
+
+          <div class=\"stats-list\" aria-label=\"Наши преимущества\">
+            <div class=\"stat-item\">
+              <div class=\"stat-icon\">◍</div>
+              <div class=\"stat-text\">Более 10 лет опыта</div>
+            </div>
+            <div class=\"stat-item\">
+              <div class=\"stat-icon\">◌</div>
+              <div class=\"stat-text\">1000+ довольных клиентов</div>
+            </div>
+            <div class=\"stat-item\">
+              <div class=\"stat-icon\">◎</div>
+              <div class=\"stat-text\">Современное оборудование</div>
+            </div>
+            <div class=\"stat-item\">
+              <div class=\"stat-icon\">✓</div>
+              <div class=\"stat-text\">Гарантия на все виды работ</div>
+            </div>
+          </div>
+        </section>
+
+        <section class=\"reviews-section\" id=\"reviews\">
+          <div class=\"section-header compact\">
+            <div class=\"heading-block\">
+              <div class=\"section-label\">ОТЗЫВЫ</div>
+              <h3>ЧТО ГОВОРЯТ КЛИЕНТЫ</h3>
+            </div>
+            <div class=\"intro-copy\">
+              <p>
+                Мы дорожим доверием клиентов и стараемся делать ремонт так, чтобы после обращения человек возвращался к нам снова и рекомендовал сервис друзьям.
+              </p>
+            </div>
+          </div>
+
+          <div class=\"reviews-grid\">
+            <article class=\"review-card\">
+              <div class=\"review-stars\">★★★★★</div>
+              <p>«В пути пропали поворотники, позвонили, Артем быстро и качественно выявил проблему, и решил проблему.»</p>
+              <div class=\"review-meta\">
+                <strong>Мария М.</strong>
+                <span>7 октября</span>
+              </div>
+            </article>
+
+            <article class=\"review-card\">
+              <div class=\"review-stars\">★★★★★</div>
+              <p>«Нужно было срочно сделать ТО, Артём принял без долгих ожиданий, быстро организовал процесс, весь сервис на высоте.»</p>
+              <div class=\"review-meta\">
+                <strong>Ирина Прибыльнова</strong>
+                <span>14 июля</span>
+              </div>
+            </article>
+
+            <article class=\"review-card\">
+              <div class=\"review-stars\">★★★★★</div>
+              <p>«Отличный мастер, обращался по автоэлектрике, все быстро, четко и по делу. Моя благодарность и рекомендация.»</p>
+              <div class=\"review-meta\">
+                <strong>Алексей Ш.</strong>
+                <span>27 июня</span>
+              </div>
+            </article>
+
+            <article class=\"review-card\">
+              <div class=\"review-stars\">★★★★★</div>
+              <p>«Спасибо большое Артём, не заводилась машина, приехал завел, отогнали машину к нему, выявил кучу проблем и помог.»</p>
+              <div class=\"review-meta\">
+                <strong>Аноним</strong>
+                <span>26 июня</span>
+              </div>
+            </article>
+
+            <article class=\"review-card\">
+              <div class=\"review-stars\">★★★★★</div>
+              <p>«Вытекла тормозная жидкость, стала искать сервис поближе к дому. Случайно нашла на карте сервис и осталась довольна.»</p>
+              <div class=\"review-meta\">
+                <strong>Ольга И.</strong>
+                <span>12 июня</span>
+              </div>
+            </article>
+
+            <article class=\"review-card\">
+              <div class=\"review-stars\">★★★★★</div>
+              <p>«Случайно нашел на карте этот неприметный сервис. Оказался удивительно светлый и очень чистый боксовый сервис.»</p>
+              <div class=\"review-meta\">
+                <strong>Владимир</strong>
+                <span>18 апреля</span>
+              </div>
+            </article>
+
+            <article class=\"review-card\">
+              <div class=\"review-stars\">★★★★★</div>
+              <p>«Артем классный специалист, обслуживание на высоте, качественно. Цены приемлемые! Рекомендую, обращайтесь.»</p>
+              <div class=\"review-meta\">
+                <strong>Владимир Г.</strong>
+                <span>2 апреля</span>
+              </div>
+            </article>
+
+            <article class=\"review-card\">
+              <div class=\"review-stars\">★★★★★</div>
+              <p>«Менял на машине заднюю оптику, всё сделано быстро, аккуратно и профессионально. Большое спасибо!»</p>
+              <div class=\"review-meta\">
+                <strong>Александр Е.</strong>
+                <span>1 апреля</span>
+              </div>
+            </article>
+
+            <article class=\"review-card\">
+              <div class=\"review-stars\">★★★★★</div>
+              <p>«Обратился по поводу ежегодного ТО автомобиля. Замечательный автосервис! Есть всё, что нужно для комфортного обслуживания.»</p>
+              <div class=\"review-meta\">
+                <strong>Сергей Обидченко</strong>
+                <span>11 февраля</span>
+              </div>
+            </article>
+
+            <article class=\"review-card\">
+              <div class=\"review-stars\">★★★★★</div>
+              <p>«Обслуживал у Артема Киа Рио 3. Все очень понравилось, Артем настоящий профи, делает как для себя.»</p>
+              <div class=\"review-meta\">
+                <strong>Влад М.</strong>
+                <span>19 июля</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class=\"contact-section\" id=\"contacts\">
+          <div class=\"section-header compact\">
+            <div class=\"heading-block\">
+              <div class=\"section-label\">КОНТАКТЫ</div>
+              <h3>ПРИЁМ СТРОГО ПО ЗАПИСИ</h3>
+            </div>
+            <div class=\"intro-copy\">
+              <p>
+                Мастер работает один, поэтому, чтобы не приехать впустую, позвоните или напишите заранее — согласуем удобное время.
+              </p>
+            </div>
+          </div>
+
+          <div class=\"contact-grid\">
+            <article class=\"contact-card\">
+              <div class=\"contact-icon\">☎</div>
+              <div class=\"contact-body\">
+                <span>Телефон</span>
+                <a href=\"tel:+79996758252\">+7 (999) 675-82-52</a>
+              </div>
+            </article>
+
+            <article class=\"contact-card\">
+              <div class=\"contact-icon\">⌂</div>
+              <div class=\"contact-body\">
+                <span>Адрес</span>
+                <p>Раменский район, д. Полушкино, 17а</p>
+              </div>
+            </article>
+
+            <article class=\"contact-card\">
+              <div class=\"contact-icon\">✉</div>
+              <div class=\"contact-body\">
+                <span>Email</span>
+                <a href=\"mailto:hello@garaz38.ru\">hello@garaz38.ru</a>
+              </div>
+            </article>
+          </div>
+
+          <div class=\"messenger-panel\" aria-label=\"Мессенджеры для связи\">
+            <span class=\"section-label dark\">МЕССЕНДЖЕРЫ</span>
+            <div class=\"messenger-links\">
+              <a href=\"https://wa.me/79996758252\" target=\"_blank\" rel=\"noreferrer\">WhatsApp</a>
+              <a href=\"https://m.max.ru/\" target=\"_blank\" rel=\"noreferrer\">Max</a>
+              <a href=\"https://t.me/garaz38\" target=\"_blank\" rel=\"noreferrer\">Telegram</a>
+            </div>
+          </div>
+        </section>
+
+        <section class=\"cta-banner\">
+          <div class=\"cta-left\">
+            <div class=\"cta-mark\">⚙</div>
+            <div class=\"cta-text\">
+              <span class=\"cta-title\">НУЖЕН РЕМОНТ?</span>
+              <span class=\"cta-subtitle\">ЗАПИШИТЕСЬ ПРЯМО СЕЙЧАС!</span>
+            </div>
+          </div>
+
+          <div class=\"cta-right\">
+            <a href=\"#contacts\" class=\"btn btn-fill\">Записаться</a>
+            <a href=\"tel:+79996758252\">+7 (999) 675-82-52</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class=\"site-footer\">
+        <div class=\"footer-brand\">
+          <div class=\"brand\" aria-label=\"Гараж 38 Автосервис\">
+            <div class=\"brand-mark\">
+              <span>38</span>
+            </div>
+            <div class=\"brand-text\">
+              <strong>ГАРАЖ 38</strong>
+              <small>АВТОСЕРВИС</small>
+            </div>
+          </div>
+        </div>
+
+        <nav class=\"footer-nav\" aria-label=\"Навигация в футере\">
+          <a href=\"#home\">Главная</a>
+          <a href=\"#services\">Услуги</a>
+          <a href=\"#about\">О нас</a>
+          <a href=\"#reviews\">Отзывы</a>
+          <a href=\"#contacts\">Контакты</a>
+        </nav>
+
+        <div class=\"socials\" aria-label=\"Социальные сети\">
+          <a href=\"https://wa.me/79996758252\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"WhatsApp\">WA</a>
+          <a href=\"https://t.me/garaz38\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Telegram\">TG</a>
+          <a href=\"https://m.max.ru/\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Max\">M</a>
+        </div>
+
+        <div class=\"copyright\">© 2025 ГАРАЖ 38. Все права защищены.</div>
+      </footer>
+    </div>
+
+    <script>
+      const serviceLinks = document.querySelectorAll('.service-link');
+      const panels = document.querySelectorAll('.album-panel');
+
+      function setPanel(panelId) {
+        panels.forEach((panel) => {
+          panel.classList.toggle('active', panel.id === panelId);
+        });
+      }
+
+      serviceLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          const panelId = link.dataset.panel;
+          setPanel(panelId);
+          history.replaceState(null, '', `#${panelId}`);
+        });
+      });
+
+      const initialHash = window.location.hash.replace('#', '');
+      if (initialHash) {
+        const matchedPanel = document.getElementById(initialHash);
+        if (matchedPanel) {
+          setPanel(initialHash);
+        }
+      }
+    </script>
+  </body>
+</html>
+"}               
