@@ -15,10 +15,6 @@
   --blue-soft: #1b3d74;
   --gold: #f4b73b;
   --shadow: 0 32px 72px rgba(1, 6, 18, 0.35);
-  --radius-xl: 34px;
-  --radius-lg: 24px;
-  --radius-md: 18px;
-  --radius-sm: 12px;
 }
 
 * { box-sizing: border-box; }
@@ -38,9 +34,8 @@ img { display: block; max-width: 100%; }
 
 .page-shell {
   width: min(1360px, calc(100% - 32px));
-  margin: 16px auto 28px;
+  margin: 18px auto 36px;
   background: #f8faff;
-  border-radius: 0;
   overflow: hidden;
   box-shadow: var(--shadow);
 }
@@ -136,7 +131,7 @@ img { display: block; max-width: 100%; }
   grid-template-columns: 1.08fr 1fr;
   align-items: center;
   background: linear-gradient(180deg, rgba(7, 26, 58, 0.98), rgba(7, 20, 40, 0.96));
-  padding: 44px 44px 30px;
+  padding: 46px 48px 30px;
   overflow: hidden;
 }
 
@@ -153,12 +148,13 @@ img { display: block; max-width: 100%; }
 
 .eyebrow {
   color: var(--white);
-  font-size: 1.06rem;
+  font-size: 1.08rem;
   font-weight: 800;
   letter-spacing: 0.02em;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   position: relative;
   padding-left: 16px;
+  text-transform: uppercase;
 }
 
 .eyebrow::before {
@@ -182,14 +178,14 @@ img { display: block; max-width: 100%; }
 }
 
 .hero-copy h1 {
-  font-size: clamp(3.7rem, 7vw, 7.9rem);
+  font-size: clamp(3.8rem, 7vw, 8rem);
   color: var(--white);
   font-weight: 900;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .hero-copy h2 {
-  font-size: clamp(1.6rem, 2vw, 2.8rem);
+  font-size: clamp(1.7rem, 2vw, 2.9rem);
   color: var(--white);
   font-weight: 900;
   max-width: 520px;
@@ -201,7 +197,7 @@ img { display: block; max-width: 100%; }
   margin: 30px 0 28px;
   display: flex;
   flex-wrap: wrap;
-  gap: 14px 18px;
+  gap: 12px 18px;
   max-width: 620px;
 }
 
@@ -270,8 +266,8 @@ img { display: block; max-width: 100%; }
 
 .hero-badge {
   position: absolute;
-  right: 6px;
-  bottom: -16px;
+  right: 8px;
+  bottom: -14px;
   width: 260px;
   height: 260px;
   display: flex;
@@ -325,7 +321,7 @@ img { display: block; max-width: 100%; }
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 20px;
-  padding: 22px 28px 0;
+  padding: 22px 30px 0;
   background: rgba(255,255,255,0.94);
 }
 
