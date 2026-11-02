@@ -553,7 +553,7 @@ img { display: block; max-width: 100%; }
 }
 
 .reviews {
-  background: linear-gradient(180deg, #f4f7fc 0%, #edf3fb 100%);
+  background: linear-gradient(180deg, #dfeafb 0%, #edf5ff 100%);
   padding: 54px 36px 46px;
   color: var(--blue);
 }
@@ -575,7 +575,7 @@ img { display: block; max-width: 100%; }
 
 .review-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(14, 35, 68, 0.08);
   border-radius: 20px;
   padding: 22px 20px 18px;
@@ -583,7 +583,7 @@ img { display: block; max-width: 100%; }
 }
 
 .review-card.featured {
-  background: linear-gradient(180deg, rgba(239, 62, 62, 0.06), rgba(255,255,255,0.82));
+  background: linear-gradient(180deg, rgba(239, 62, 62, 0.08), rgba(255,255,255,0.85));
   border-color: rgba(239, 62, 62, 0.18);
 }
 
