@@ -345,11 +345,11 @@ img { display: block; max-width: 100%; }
   display: grid;
   place-items: center;
   margin: 0 auto 12px;
-  background: #f6f8fb;
+  background: #f6f8fb url("assets/logo-garazh38.svg") center / 80% no-repeat;
   border: 2px solid rgba(8,26,57,0.28);
   border-radius: 50%;
-  font-size: 1.9rem;
-  color: #0d1d3d;
+  font-size: 0;
+  color: transparent;
 }
 
 .mini-card p {
